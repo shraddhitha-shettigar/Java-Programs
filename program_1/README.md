@@ -18,6 +18,6 @@ program 1c)2) https://github.com/shraddhitha-shettigar/Java-Programs/blob/f06fb6
 
 program 1c)3) https://github.com/shraddhitha-shettigar/Java-Programs/blob/f06fb6c9e60efc36284d70ed211f05a5d59b9d90/program_1/pro1_c3.jpg
 
-program 1c)4) https://github.com/shraddhitha-shettigar/Java-Programs/blob/f06fb6c9e60efc36284d70ed211f05a5d59b9d90/program_1/pro1_c5.jpg
+program 1c)4) https://github.com/shraddhitha-shettigar/Java-Programs/blob/f06fb6c9e60efc36284d70ed211f05a5d59b9d90/program_1/pro1_c4.jpg
 
 program 1c)5) https://github.com/shraddhitha-shettigar/Java-Programs/blob/f06fb6c9e60efc36284d70ed211f05a5d59b9d90/program_1/pro1_c5.jpg
