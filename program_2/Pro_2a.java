@@ -3,73 +3,96 @@
 package program_2;
 public class Pro_2a {
 	public static void main(String[] args) {
-        // 1. String Creation and Basic Operations
-        String str1 = "AIET";
-        String str2 = new String("Welcome to AIET");
-        System.out.println("String 1: " + str1);
-        System.out.println("String 2: " + str2);
+		// Basic String Creation
+		System.out.println("=== String Creation and Basic Operations ===");
+		String str1 = "Hello, World!";
+		String str2 = new String("Java Programming");
+		System.out.println("Original strings:");
+		System.out.println("str1: " + str1);
+		System.out.println("str2: " + str2);
+		// Length and Character Access
+		System.out.println("\n=== Length and Character Access ===");
+		System.out.println("Length of str1: " + str1.length());
+		System.out.println("Character at index 4 in str1: " + str1.charAt(4));
+		// String Comparison
+		System.out.println("\n=== String Comparison ===");
+		String str3 = "hello, world!";
+		System.out.println("str1 equals str3: " + str1.equals(str3));
+		System.out.println("str1 equals str3 (ignore case): " + str1.equalsIgnoreCase(str3));
+		System.out.println("str1 compareTo str3: " + str1.compareTo(str3));
+		// Searching in Strings
+		System.out.println("\n=== String Searching ===");
+		System.out.println("Index of 'World' in str1: " + str1.indexOf("World"));
+		System.out.println("Last index of 'o' in str1: " + str1.lastIndexOf('o'));
+		System.out.println("str1 contains 'Hello': " + str1.contains("Hello"));
+		// Substring Operations
+		System.out.println("\n=== Substring Operations ===");
+		System.out.println("Substring of str1 (7 to end): " + str1.substring(7));
+		System.out.println("Substring of str1 (0 to 5): " + str1.substring(0, 5));
+		// String Modification
+		System.out.println("\n=== String Modification ===");
+		System.out.println("Uppercase: " + str1.toUpperCase());
+		System.out.println("Lowercase: " + str1.toLowerCase());
+		System.out.println("Replace 'World' with 'Java': " + str1.replace("World", "Java"));
 
-        // 2. Length and Character Access
-        System.out.println("Length of str2: " + str2.length());
-        System.out.println("Character at index 5 in str2: " + str2.charAt(5));
+		// Whitespace Handling
+		System.out.println("\n=== Whitespace Handling ===");
+		String spacedString = " Trimming Example ";
+		System.out.println("Original: '" + spacedString + "'");
+		System.out.println("After trim: '" + spacedString.trim() + "'");
+		// String Concatenation
+		System.out.println("\n=== String Concatenation ===");
+		String concat1 = "Hello";
+		String concat2 = "World";
+		System.out.println("Using + operator: " + concat1 + " " + concat2);
+		System.out.println("Using concat(): " + concat1.concat(" ").concat(concat2));
+		// String Splitting
+		System.out.println("\n=== String Splitting ===");
+		String csvText = "Java,Python,C++,JavaScript";
+		System.out.println("Original CSV: " + csvText);
+		String[] languages = csvText.split(",");
+		System.out.println("After splitting:");
+		for (int i = 0; i < languages.length; i++) {
+		System.out.println("Language " + (i + 1) + ": " + languages[i]);
+		}
+		// String Building with StringBuilder
+		System.out.println("\n=== StringBuilder Demo ===");
+		StringBuilder builder = new StringBuilder();
+		builder.append("Learning ");
+		builder.append("Java ");
+		builder.append("Programming");
+		System.out.println("StringBuilder result: " + builder.toString());
+		builder.insert(9, "Core ");
+		System.out.println("After insert: " + builder.toString());
+		builder.reverse();
+		System.out.println("After reverse: " + builder.toString());
+		// String Formatting
+		System.out.println("\n=== String Formatting ===");
+		String formatted = String.format("Name: %s, Age: %d, Height: %.2f", "John", 25, 1.75);
+		System.out.println("Formatted string: " + formatted);
+		// Checking String Properties
+		System.out.println("\n=== String Properties ===");
+		String testString = "Java123";
+		System.out.println("Is empty: " + testString.isEmpty());
+		System.out.println("Starts with 'Ja': " + testString.startsWith("Ja"));
+		System.out.println("Ends with '123': " + testString.endsWith("123"));
+		// Practical Example: Email Validation
+		System.out.println("\n=== Practical Example: Email Validation ===");
 
-        // 3. String Comparison
-        String str3 = "AIET";
-        System.out.println("str1 equals str3? " + str1.equals(str3));
-        System.out.println("str1 compareTo str3: " + str1.compareTo(str3));
-        System.out.println("str1 equalsIgnoreCase str3: " + str1.equalsIgnoreCase(str3));
-
-        // 4. String Searching
-        System.out.println("Index of 'to' in str2: " + str2.indexOf("to"));
-        System.out.println("str2 contains 'Welcome'? " + str2.contains("Welcome"));
-
-        // 5. Substring Operations
-        System.out.println("Substring of str2 (0 to 7): " + str2.substring(0, 7));
-
-        // 6. String Modification
-        System.out.println("Replace 'AIET' with 'Alvas' in str2: " + str2.replace("AIET", "Alvas"));
-        System.out.println("Convert str2 to lowercase: " + str2.toLowerCase());
-        System.out.println("Convert str2 to uppercase: " + str2.toUpperCase());
-
-        // 7. Whitespace Handling
-        String strWithSpaces = "   Hello AIET   ";
-        System.out.println("Original with spaces: '" + strWithSpaces + "'");
-        System.out.println("After trim(): '" + strWithSpaces.trim() + "'");
-
-        // 8. String Concatenation
-        String firstName = "Shraddhitha";
-        String lastName = "Shettigar";
-        String fullName = firstName.concat(" ").concat(lastName);
-        System.out.println("Full Name: " + fullName);
-
-        // 9. String Splitting
-        String csv = "AIET,Engineering,Moodbidri";
-        String[] parts = csv.split(",");
-        System.out.println("Splitted parts:");
-        for (String part : parts) {
-            System.out.println(part);
-        }
-
-        // 10. StringBuilder Demo
-        StringBuilder sb = new StringBuilder("Hello");
-        sb.append(" AIET");
-        sb.insert(5, " to");
-        sb.replace(0, 5, "Welcome");
-        sb.delete(0, 3);
-        System.out.println("StringBuilder result: " + sb.toString());
-
-        // 11. String Formatting
-        String dept = "CSE";
-        int year = 3;
-        String formatted = String.format("Department: %s, Year: %d", dept, year);
-        System.out.println("Formatted String: " + formatted);
-
-        // 12. Validate Email with contains(), startsWith(), endsWith()
-        String email = "student@aiet.edu.in";
-        if (email.contains("@") && email.startsWith("student") && email.endsWith(".edu.in")) {
-            System.out.println("Email is valid.");
-        } else {
-            System.out.println("Email is invalid.");
-        }
-    }
-}
+		String email = "user@example.com";
+		boolean isValidEmail = validateEmail(email);
+		System.out.println("Email: " + email);
+		System.out.println("Is valid: " + isValidEmail);
+		}
+		// Helper method for email validation
+		private static boolean validateEmail(String email) {
+		// Basic email validation
+		return email != null &&
+		email.contains("@") &&
+		email.contains(".") &&
+		email.indexOf("@") < email.lastIndexOf(".") &&
+		!email.startsWith("@") &&
+		!email.endsWith(".") &&
+		email.length() >= 5;
+		}
+		}
