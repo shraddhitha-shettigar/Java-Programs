@@ -6,6 +6,7 @@ results respectively
 
 
 <%@ page import="java.sql.*" %>
+<!DOCTYPE html>
 <html>
 <head>
     <title>Update Employee</title>
@@ -33,16 +34,18 @@ results respectively
     String empname = request.getParameter("empname");
     String basicsalary = request.getParameter("basicsalary");
 
-    if (empno != null && empname != null && basicsalary != null) {
-        Connection conn = null;
-        PreparedStatement ps = null;
+    Connection conn = null;
+    PreparedStatement ps = null;
+    Statement stmt = null;
+    ResultSet rs = null;
 
-        try {
-            Class.forName("com.mysql.cj.jdbc.Driver");
-            conn = DriverManager.getConnection(
-                "jdbc:mysql://localhost:3306/test?useSSL=false&serverTimezone=UTC", "root", "");
+    try {
+        Class.forName("com.mysql.cj.jdbc.Driver");
+        conn = DriverManager.getConnection(
+            "jdbc:mysql://localhost:3306/test?useSSL=false&serverTimezone=UTC", "root", "");
 
-            String sql = "UPDATE Emp SET Emp_Name = ?, basicsalary = ? WHERE Emp_no = ?";
+        if (empno != null && empname != null && basicsalary != null) {
+            String sql = "UPDATE Emp SET Emp_Name = ?, BasicSalary = ? WHERE Emp_no = ?";
             ps = conn.prepareStatement(sql);
             ps.setString(1, empname);
             ps.setDouble(2, Double.parseDouble(basicsalary));
@@ -53,15 +56,33 @@ results respectively
             if (rows > 0) {
                 out.println("<p style='color:green;'>Employee updated successfully.</p>");
             } else {
-                out.println("<p style='color:red;'>Employee with empno " + empno + " not found.</p>");
+                out.println("<p style='color:red;'>Employee with Emp No " + empno + " not found.</p>");
             }
-
-        } catch (Exception e) {
-            out.println("<p style='color:red;'>Error: " + e.getMessage() + "</p>");
-        } finally {
-            try { if (ps != null) ps.close(); } catch (Exception e) {}
-            try { if (conn != null) conn.close(); } catch (Exception e) {}
         }
+
+        // Now fetch and display all employee records
+        out.println("<h2>All Employee Records</h2>");
+        stmt = conn.createStatement();
+        rs = stmt.executeQuery("SELECT * FROM Emp");
+
+        out.println("<table border='1'>");
+        out.println("<tr><th>Emp No</th><th>Emp Name</th><th>Basic Salary</th></tr>");
+        while (rs.next()) {
+            out.println("<tr>");
+            out.println("<td>" + rs.getInt("Emp_no") + "</td>");
+            out.println("<td>" + rs.getString("Emp_Name") + "</td>");
+            out.println("<td>" + rs.getDouble("BasicSalary") + "</td>");
+            out.println("</tr>");
+        }
+        out.println("</table>");
+
+    } catch (Exception e) {
+        out.println("<p style='color:red;'>Error: " + e.getMessage() + "</p>");
+    } finally {
+        try { if (ps != null) ps.close(); } catch (Exception e) {}
+        try { if (rs != null) rs.close(); } catch (Exception e) {}
+        try { if (stmt != null) stmt.close(); } catch (Exception e) {}
+        try { if (conn != null) conn.close(); } catch (Exception e) {}
     }
 %>
 
