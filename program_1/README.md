@@ -20,4 +20,4 @@ program 1c)3) https://github.com/shraddhitha-shettigar/Java-Programs/blob/2bbb19
 
 program 1c)4) https://github.com/shraddhitha-shettigar/Java-Programs/blob/2bbb1927cb364128a65a50ddb8baf71cfaf4b4d5/program_1/program_1_output/pro1_c4.jpg
 
-program 1c)5) https://github.com/shraddhitha-shettigar/Java-Programs/blob/2bbb1927cb364128a65a50ddb8baf71cfaf4b4d5/program_1/program_1_output/pro1_c2.jpg
+program 1c)5) https://github.com/shraddhitha-shettigar/Java-Programs/blob/2bbb1927cb364128a65a50ddb8baf71cfaf4b4d5/program_1/program_1_output/pro1_c5.jpg
