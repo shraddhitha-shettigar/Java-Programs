@@ -8,7 +8,7 @@ public class Pro_3c10 {
 	        return str.trim().split("\\s+").length;
 	    }
 	public static void main(String[] args) {
-		 System.out.println(countWords("Hello world this is a test"));
+		 System.out.println(countWords("Hello world this is a tes"));
 
 	}
 
