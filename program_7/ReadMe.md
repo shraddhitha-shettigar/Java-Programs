@@ -1,2 +1,6 @@
 OUTPUTS::
 
+Program 7a) https://github.com/shraddhitha-shettigar/Java-Programs/blob/7d3177ea6df5a673b89c15bb51f383765ff991f5/program_7/Program_7_output/pro_7a1.jpg && https://github.com/shraddhitha-shettigar/Java-Programs/blob/7d3177ea6df5a673b89c15bb51f383765ff991f5/program_7/Program_7_output/pro_7a2.jpg && https://github.com/shraddhitha-shettigar/Java-Programs/blob/7d3177ea6df5a673b89c15bb51f383765ff991f5/program_7/Program_7_output/pro_7a3.jpg && https://github.com/shraddhitha-shettigar/Java-Programs/blob/7d3177ea6df5a673b89c15bb51f383765ff991f5/program_7/Program_7_output/pro_7a4.jpg
+
+
+Program 7b) https://github.com/shraddhitha-shettigar/Java-Programs/blob/7d3177ea6df5a673b89c15bb51f383765ff991f5/program_7/Program_7_output/pro_7b1.jpg && https://github.com/shraddhitha-shettigar/Java-Programs/blob/7d3177ea6df5a673b89c15bb51f383765ff991f5/program_7/Program_7_output/pro_7b2.jpg && https://github.com/shraddhitha-shettigar/Java-Programs/blob/7d3177ea6df5a673b89c15bb51f383765ff991f5/program_7/Program_7_output/pro_7b3.jpg
