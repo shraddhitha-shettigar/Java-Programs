@@ -3,15 +3,11 @@
 package program_4;
 import java.awt.Color;
 import java.awt.Font;
-//A simple Swing application.
 import javax.swing.*;
 class Pro_4a {
 Pro_4a() {
 //Create a new JFrame container.
 JFrame jfrm = new JFrame("A Simple Swing Application");
-//jfrm.setFont("Serif",Font.BOLD,18);
-//label = new JLabel("A label"); label.setFont(new Font("Serif", Font.PLAIN, 14));
-//Give the frame an initial size.
 jfrm.setSize(275, 100);
 //Terminate the program when the user closes the application.
 jfrm.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
